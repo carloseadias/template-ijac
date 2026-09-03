@@ -1,0 +1,48 @@
+======================================================================
+INSTRUÇÕES DE COMPILAÇÃO E USO DO TEMPLATE IJAC
+======================================================================
+
+1. ESTRUTURA DO PROJETO
+Este projeto foi dividido em múltiplos arquivos para facilitar a 
+organização e escrita do seu artigo.
+
+- O arquivo "000.main_ijac.tex" é o ARQUIVO PRINCIPAL. 
+  Normalmente, **VOCÊ NÃO DEVE ALTERÁ-LO**, a não ser que precise 
+  adicionar novos pacotes (usepackage) ou incluir/remover capítulos 
+  (arquivos .tex extras).
+- Os demais arquivos (001, 002, 101, 102...) contêm o conteúdo do 
+  artigo em inglês. Edite-os para escrever o seu texto.
+
+2. ARQUIVOS ABNTEX2
+Para organizar melhor, os arquivos do abntex2 devem ser colocados 
+dentro da pasta chamada "abntex2". O arquivo base já está configurado 
+para puxá-los de lá.
+
+3. COMO COMPILAR
+Abaixo estão as instruções para compilar o documento em diferentes 
+ambientes de trabalho:
+
+>>> A. OVERLEAF
+1. Crie um novo projeto em branco no Overleaf.
+2. Faça o upload do arquivo ZIP diretamente para o projeto.
+3. Abra o arquivo "000.main_ijac.tex" e compile clicando no botão verde 
+   "Recompile". O Overleaf processará o BibTeX automaticamente.
+
+>>> B. MIKTEX / TEXWORKS
+1. Extraia todo o conteúdo do ZIP para uma pasta no seu computador.
+2. Abra o arquivo "000.main_ijac.tex" usando o TeXworks.
+3. No menu superior esquerdo, certifique-se de que a opção "pdfLaTeX" 
+   esteja selecionada.
+4. Clique no botão de Play verde (ou pressione Ctrl+T) para compilar.
+5. No mesmo menu, troque de "pdfLaTeX" para "BibTeX" e clique no Play 
+   novamente. (Isso vai preparar as referências bibliográficas).
+6. Volte a opção para "pdfLaTeX" e clique no Play mais duas vezes. 
+   Isso garantirá que as numerações, sumários e citações cruzadas 
+   fiquem corretas.
+
+>>> C. TERMINAL / LINHA DE COMANDO
+Execute na ordem:
+Passo 1: pdflatex 000.main_ijac.tex
+Passo 2: bibtex 000.main_ijac
+Passo 3: pdflatex 000.main_ijac.tex
+Passo 4: pdflatex 000.main_ijac.tex
